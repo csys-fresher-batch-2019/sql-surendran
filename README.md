@@ -6,7 +6,7 @@
 
 * user should  be able to view employee details;
 
-## features to view the employees information
+## features 1 to view the employees information
 ```sql
 create table employee_details
 (
@@ -22,3 +22,14 @@ create table employee_details
     constraint emp_fk foreign key (department_id) references departments(dept_id)
 );
 ```
+### features 2 to view the employees departments
+``` sql
+create table departments
+( 
+     dept_id number ,              --PRIMARY KEY
+     department_name varchar2(20) not null,
+     manager_id varchar2(20) not null,
+     department_location varchar2(20),
+     constraint dept_pk primary key(dept_id)
+);
+
