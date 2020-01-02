@@ -10,30 +10,28 @@
 ```sql
 create table employee_details
 (
-    emp_id number(20) ,	         
-    department_id number(20) not null,	
-    employee_name varchar2(55) not null,
-    birth_date date,
-    joining_date date,
+    emp_id number(20),
+    employee_name varchar2(20) not null,	
+    dept_id number(20) not null,
+    joining_date date,            
     constraint emp_dept_pk primary key(emp_id),
-    constraint emp_fk foreign key (department_id) references departments(dept_id)
+    constraint emp_fk foreign key (dept_id) references departments(dept_id)
 );
 
-                      insert into EMPLOYEE_DETAILS (emp_id,employee_name,department_id,date_of_birth,joining_date,)
-                      values (1,'anand',101,'21-APR-1990','10-DEC-2018'); 
-                      
-                      insert into EMPLOYEE_DETAILS (emp_id,employee_name,department_id,date_of_birth,joining_date)
-                      values (2,'vijay',101,'22-MAY-1988','25-MAR-2015');
-                      
-                      insert into EMPLOYEE_DETAILS (emp_id,employee_name,department_id,date_of_birth,joining_date)
-                      values (3,'ram',102,' 08-SEP-1996','10-DEC-2018');
-                      
-                      insert into EMPLOYEE_DETAILS (emp_id,employee_name,department_id,date_of_birth,joining_date)
-                      values (4,'naveen',103,'06-SEP-1998','22-JUN-2017');
-                     
-                     select * from EMPLOYEE_DETAILS;
+                employee_details
+
+| emp_id | employee_name | dept_id       | joining_date | 
+|--------|---------------|---------------|--------------|
+| 1      | anand         | 1001           | 10-DEC-2018  |
+| 2      | vijay         | 1001           | 25-MAR-2015  | 
+| 3      | ram           | 1002           | 13-MAY-2016  | 
+| 4      | naveen        | 1003           | 22-JUN-2017  |
+| 5      | magesh        | 1001           | 03-MAR-2000  |
+
+
+  
 ```
-### features 2 to view the employees departments
+### features 2 to view the  departments list
 ``` sql
 create table departments
 ( 
@@ -43,4 +41,29 @@ create table departments
      department_location varchar2(20),
      constraint dept_pk primary key(dept_id)
 );
+
+department
+
+| dept_id | dept_name       | 
+|---------|-----------------|
+| 1001    | HR              |      
+| 1002    | sales           | 
+| 1003    | development     |  
+
+
+#### features 3 to view the salary details
+
+```sql
+create table salary(
+emp_id number not null,
+base_pay number not null,
+allowance number,
+salary_increment number,
+total_salary number,
+constraint emp_id_fk foreign key(emp_id) references employee_details(emp_id),
+constraint salary_ck check (total_salary >= 0));
+
+
+
+
 
