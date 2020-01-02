@@ -21,9 +21,9 @@ create table employee_details
 
 | emp_id  |  employee_name  |  dept_id | joining_date | sex |
 |---------|-----------------|----------|--------------|-----|
-| 1       | anand           | 1001     | 10-DEC-2018  | m   |
-| 2       | vijay           | 1001     | 25-MAR-2015  | m   |
-| 3       | isha            | 1002     | 13-MAY-2016  | f   |
+| 1       | anand           | 101     | 10-DEC-2018  | m   |
+| 2       | vijay           | 101     | 25-MAR-2015  | m   |
+| 3       | isha            | 102     | 13-MAY-2016  | f   |
 ```
 ### features 2 To view the  departments 
 ``` sql
@@ -37,9 +37,9 @@ create table departments
 
 | dept_id | dept_name       | 
 |---------|-----------------|
-| 1001    | HR              |      
-| 1002    | sales           | 
-| 1003    | development     |  
+| 101     | HR              |      
+| 102     | dba             | 
+| 103     | sales           |  
 
 ```
 #### features 3 To view the salary details
