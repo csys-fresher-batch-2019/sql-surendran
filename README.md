@@ -6,7 +6,7 @@
 
 * user should  be able to view employee details;
 
-## features 1 to view the employees information
+## features 1 To view the employees information
 ```sql
 create table employee_details
 (
@@ -25,7 +25,7 @@ create table employee_details
 | 3      | ram           | 1002           | 13-MAY-2016  | 
   
 ```
-### features 2 to view the  departments list
+### features 2 To view the  departments 
 ``` sql
 create table departments
 ( 
@@ -42,7 +42,7 @@ create table departments
 | 1003    | development     |  
 
 ```
-#### features 3 to view the salary details
+#### features 3 To view the salary details
 
 ```sql
 create table salary(
