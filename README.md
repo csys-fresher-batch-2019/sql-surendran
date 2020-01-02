@@ -23,10 +23,6 @@ create table employee_details
 | 1      | anand         | 1001           | 10-DEC-2018  |
 | 2      | vijay         | 1001           | 25-MAR-2015  | 
 | 3      | ram           | 1002           | 13-MAY-2016  | 
-| 4      | naveen        | 1003           | 22-JUN-2017  |
-| 5      | magesh        | 1001           | 03-MAR-2000  |
-
-
   
 ```
 ### features 2 to view the  departments list
