@@ -19,12 +19,11 @@ create table employee_details
     constraint emp_fk foreign key (department_id) references departments(dept_id)
 );
 
-| emp_id | employee_name | dept_id       | joining_date | 
-|--------|---------------|---------------|--------------|
-| 1      | anand         | 1001           | 10-DEC-2018  |
-| 2      | vijay         | 1001           | 25-MAR-2015  | 
-| 3      | ram           | 1002           | 13-MAY-2016  | 
-  
+| emp_id  |  employee_name  |  dept_id | joining_date | sex |
+|---------|-----------------|----------|--------------|-----|
+| 1       | anand           | 1001     | 10-DEC-2018  | m   |
+| 2       | vijay           | 1001     | 25-MAR-2015  | m   |
+| 3       | isha            | 1002     | 13-MAY-2016  | f   |
 ```
 ### features 2 To view the  departments 
 ``` sql
