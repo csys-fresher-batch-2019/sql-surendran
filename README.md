@@ -21,9 +21,18 @@ create table employee_details
 
 | emp_id  |  employee_name  |  dept_id | joining_date | sex |
 |---------|-----------------|----------|--------------|-----|
-| 1       | anand           | 101     | 10-DEC-2018  | m   |
-| 2       | vijay           | 101     | 25-MAR-2015  | m   |
-| 3       | isha            | 102     | 13-MAY-2016  | f   |
+| 1       | anand           | 101      | 10-DEC-2018  | m   |
+| 2       | vijay           | 101      | 25-MAR-2015  | m   |
+| 3       | isha            | 102      | 13-MAY-2016  | f   |
+
+      insert into EMPLOYEE_DETAILS (emp_id,employee_name,dept_id,joining_date)
+      values (emp_ID_SEQ.nextval,'vijay',101,'25-MAR-2015');
+      insert into EMPLOYEE_DETAILS (emp_id,employee_name,dept_id,joining_date,sex)
+      values (emp_ID_SEQ.nextval,'vijay',101,'25-MAR-2015','m');
+      insert into EMPLOYEE_DETAILS (emp_id,employee_name,dept_id,joining_date,sex)
+      values (emp_ID_SEQ.nextval,'isha',102,' 13-MAY-2016','f');
+
+
 ```
 ### features 2 To view the  departments 
 ``` sql
