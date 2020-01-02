@@ -43,8 +43,7 @@ create table departments
 
 ```
 #### features 3 To view the salary details
-
-```sql
+``` sql
 create table salary(
 emp_id number not null,
 base_pay number not null,
