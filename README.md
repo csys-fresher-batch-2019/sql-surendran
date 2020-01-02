@@ -12,7 +12,7 @@ create table employee_details
 (
     emp_id number(20) ,	         	
     employee_name varchar2(55) not null,
-     department_id number(20) not null,
+     dept_id number(20) not null,
     joining_date date,
     sex char(1) check (sex in('m','f')),
     constraint emp_dept_pk primary key(emp_id),
