@@ -18,8 +18,6 @@ create table employee_details
     constraint emp_fk foreign key (dept_id) references departments(dept_id)
 );
 
-                employee_details
-
 | emp_id | employee_name | dept_id       | joining_date | 
 |--------|---------------|---------------|--------------|
 | 1      | anand         | 1001           | 10-DEC-2018  |
@@ -36,13 +34,10 @@ create table employee_details
 create table departments
 ( 
      dept_id number ,              --PRIMARY KEY
-     department_name varchar2(20) not null,
-     manager_id varchar2(20) not null,
-     department_location varchar2(20),
+     dept_name varchar2(20) not null,
      constraint dept_pk primary key(dept_id)
 );
 
-department
 
 | dept_id | dept_name       | 
 |---------|-----------------|
@@ -50,7 +45,7 @@ department
 | 1002    | sales           | 
 | 1003    | development     |  
 
-
+```
 #### features 3 to view the salary details
 
 ```sql
@@ -64,6 +59,11 @@ constraint emp_id_fk foreign key(emp_id) references employee_details(emp_id),
 constraint salary_ck check (total_salary >= 0));
 
 
+| emp_id | base_pay | allowance | salary_increment | total_salary |
+|--------|----------|-----------|------------------|--------------|
+| 1      | 8000     | 1000      | 0                | 0            |
+| 2      | 13000    | 1500      | 0                | 0            |
+| 3      | 9500     | 500       | 0                | 0            |
 
 
-
+```
