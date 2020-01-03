@@ -110,6 +110,16 @@ insert into salary(emp_id,base_pay,allowance,salary_increment)
 | suriya  | 6 |
 | punitha | 9 |
 
+
+update salary set salary_increment =2000 where emp_id=3
+
+| 1 | 10000 | 1000 | 0    | 11000 |
+|---|-------|------|------|-------|
+| 2 | 12500 | 2000 | 1000 | 15500 |
+| 3 | 14500 | 500  | 2000 | 15000 |
+| 4 | 15000 | 500  | 2000 | 17500 |
+| 5 | 11000 | 500  | 1500 | 13000 |
+
 *   update salary set allowance=2000 where emp_id=3
 
 
