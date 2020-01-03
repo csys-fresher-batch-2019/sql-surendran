@@ -50,6 +50,15 @@ create table departments
 | 102     | dba             | 
 | 103     | sales           |  
 
+
+insert into departments( dept_id,department_name)
+values (101,'hr');
+
+insert into departments( dept_id,department_name)
+values (102,'dba');
+
+insert into departments( dept_id,department_name)
+values (103,'sales');
 ```
 #### features 3 To view the salary details
 ``` sql
@@ -63,11 +72,18 @@ constraint emp_id_fk foreign key(emp_id) references employee_details(emp_id),
 constraint salary_ck check (total_salary >= 0));
 
 
-| emp_id | base_pay | allowance | salary_increment | total_salary |
-|--------|----------|-----------|------------------|--------------|
-| 1      | 8000     | 1000      | 0                | 0            |
-| 2      | 13000    | 1500      | 0                | 0            |
-| 3      | 9500     | 500       | 0                | 0            |
+| emp_id | base_pay  | allowance | salary_increment | total_salary |
+|--------|---------- |-----------|------------------|--------------|
+| 1      | 10000     | 500       | 0                | 10500        |
+| 2      | 12500     | 500       | 1000             | 14000        |
+| 3      | 14500     | 500       | 2000             | 15000        |
 
+
+insert into salary(emp_id,base_pay,allowance,salary_increment,total_salary)
+            values(1,10000,500,0,10500);
+insert into salary(emp_id,base_pay,allowance,salary_increment,total_salary)
+            values(2,12500,500,1000,14000);
+insert into salary(emp_id,base_pay,allowance,salary_increment)
+            values(3,14500,500,2000,15000);
 
 ```
