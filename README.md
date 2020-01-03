@@ -90,7 +90,7 @@ insert into salary(emp_id,base_pay,allowance,salary_increment)
 ```
 
 ##### secnario
-```
+```sql
 *   select e.dept_id,e.emp_id,e.employee_name,d.department_name,s.total_salary from EMPLOYEE_DETAILS e,departments d,salary s 
    where e.dept_id = d.dept_id and s.emp_id =e.emp_id
    
@@ -100,7 +100,8 @@ insert into salary(emp_id,base_pay,allowance,salary_increment)
 | 102 | 3 | isha    | DBA   | 15000 |
 | 103 | 4 | suriya  | sales | 17500 |
 | 102 | 5 | punitha | DBA   | 13000 |
- 
+ ```
+ ```sql
    
 *   select employee_name, floor((sysdate-joining_date)/365)as Experience from employee_details 
 | anand   | 1 |
@@ -110,7 +111,8 @@ insert into salary(emp_id,base_pay,allowance,salary_increment)
 | suriya  | 6 |
 | punitha | 9 |
 
-
+```
+```sql
 update salary set salary_increment =2000 where emp_id=3
 
 | 1 | 10000 | 1000 | 0    | 11000 |
@@ -119,7 +121,9 @@ update salary set salary_increment =2000 where emp_id=3
 | 3 | 14500 | 500  | 2000 | 15000 |
 | 4 | 15000 | 500  | 2000 | 17500 |
 | 5 | 11000 | 500  | 1500 | 13000 |
+```
 
+```sql
 *   update salary set allowance=2000 where emp_id=3
 
 
@@ -129,7 +133,9 @@ update salary set salary_increment =2000 where emp_id=3
 | 3 | 14500 | 2000 | 2000 | 16500 |
 | 4 | 15000 | 500  | 2000 | 17500 |
 | 5 | 11000 | 500  | 1500 | 13000 |
+```
 
+```sql
 create or replace PROCEDURE TOTAL_SALARY 
 (
    eid IN NUMBER 
@@ -154,7 +160,8 @@ exec total_salary(3);
 | 4 | 15000 | 500  | 2000 | 17500 |
 | 5 | 11000 | 500  | 1500 | 13000 |
 
-
+```
+```sql
 * select e.dept_id,e.emp_id,e.employee_name,d.department_name,s.total_salary from EMPLOYEE_DETAILS e,departments d,salary s 
 where e.dept_id = d.dept_id and s.emp_id =e.emp_id and s.total_salary >15000
 
@@ -162,3 +169,4 @@ where e.dept_id = d.dept_id and s.emp_id =e.emp_id and s.total_salary >15000
 |-----|---|--------|-------|-------|
 | 102 | 3 | isha   | DBA   | 18500 |
 | 103 | 4 | suriya | sales | 17500 |
+```
