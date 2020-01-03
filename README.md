@@ -25,6 +25,9 @@ create table employee_details
 | 2       | vijay           | 101      | 25-MAR-2015  | m   |
 | 3       | isha            | 102      | 13-MAY-2016  | f   |
 
+
+      CREATE SEQUENCE emp_ID_SEQ START WITH 1 INCREMENT BY 1;
+
       insert into EMPLOYEE_DETAILS (emp_id,employee_name,dept_id,joining_date)
       values (emp_ID_SEQ.nextval,'vijay',101,'25-MAR-2015');
       insert into EMPLOYEE_DETAILS (emp_id,employee_name,dept_id,joining_date,sex)
@@ -87,3 +90,37 @@ insert into salary(emp_id,base_pay,allowance,salary_increment)
             values(3,14500,500,2000,15000);
 
 ```
+
+##### secnario
+```
+*   select e.dept_id,e.emp_id,e.employee_name,d.department_name,s.total_salary from EMPLOYEE_DETAILS e,departments d,salary s 
+   where e.dept_id = d.dept_id and s.emp_id =e.emp_id
+   
+
+ 
+ * select employee_name, ((sysdate-joining_date)/365)as Experience from employee_details 
+   
+   to see desc and floor
+   
+*   select employee_name, floor((sysdate-joining_date)/365)as Experience from employee_details order by desc
+
+
+*   update salary set allowance=2000 where emp_id=1
+
+
+create or replace PROCEDURE TOTAL_SALARY 
+(
+   eid IN NUMBER 
+) 
+AS 
+BEGIN
+
+update salary set total_salary=total_salary+salary_increment where emp_id=eid;
+update salary set total_salary=allowance+salary_increment+base_pay where emp_id=eid;
+END TOTAL_SALARY;
+
+
+to run PROCEDURE
+
+exec total_salary(2);
+
